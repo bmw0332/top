@@ -25,9 +25,9 @@ body{
 }
 .l{display:block}
 .nw{white-space:nowrap}
-/* 改行ルール：見出し・短いコピーは言葉の区切りで折り返し、行の長さをそろえる。本文は一般的な組版どおり行末までそろえて流す（行頭の句読点は禁止） */
+/* 改行ルール：見出し・短いコピーは言葉の区切りで折り返す。本文は左端そろえで、行末まで詰めて流す（行頭の句読点は禁止） */
 h1,h2,h3,h4,.kicker,.sub,.micro,.issues li,.pivot,.mid p,.book-note,.faq summary,.node,.name,.role,.ask li,.assure li,.points li{text-wrap:balance}
-.bio,.scope-text,.say,.svc p,.plan p:last-child,.steps p,.faq .a p,.note,.next,.lead,.desc{word-break:normal;text-align:justify;text-justify:inter-character;text-wrap:pretty}
+.bio,.scope-text,.say,.svc p,.plan p:last-child,.steps p,.faq .a p,.note,.next,.lead,.desc{word-break:normal;text-wrap:pretty}
 .nw{white-space:nowrap}
 h1,h2,h3,h4{font-weight:700;line-height:1.5;letter-spacing:.03em;font-feature-settings:"palt"}
 img{display:block;max-width:100%}
@@ -255,6 +255,7 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
   .svc h4{font-size:17.5px}
   .svc p{font-size:15.5px}
   .mid{flex-direction:column;align-items:stretch;gap:16px;margin-top:40px;padding:24px 20px}
+  .mid p{flex:0 1 auto}
   .mid p{font-size:18px}
 
   .person{grid-template-columns:1fr;gap:24px;margin-top:32px}
