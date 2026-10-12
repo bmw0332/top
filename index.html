@@ -282,6 +282,42 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
   .book .btn,.mid .btn,.hero .cta .btn{font-size:16px}
   .mid{padding:22px 14px}
 }
+
+/* cases */
+#cases{border-bottom:1px solid var(--line)}
+.cases-lead{margin-top:14px}
+.case-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:24px;row-gap:0;margin-top:36px}
+.case{display:grid;grid-row:span 7;grid-template-rows:subgrid;row-gap:0;align-content:start;background:var(--alt);border-radius:12px;padding:28px 26px}
+.case>*{min-width:0}
+.case-ind{font-size:14px;font-weight:700;color:var(--teal);letter-spacing:.03em}
+.case-meta{margin-top:2px;font-size:12.5px;color:var(--muted)}
+.case h3{margin-top:12px;font-size:18.5px;line-height:1.6}
+.ba-cap{margin-top:18px;font-size:12.5px;font-weight:700;letter-spacing:.04em;color:var(--muted)}
+.ba{container-type:inline-size;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:8px;margin-top:8px}
+.ba>div{border-radius:8px;padding:12px 14px 13px}
+.ba-before{background:#fff;border:1px solid var(--line)}
+.ba-after{position:relative;background:var(--teal);color:#fff}
+.ba small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.1em}
+.ba-before small{color:var(--muted)}
+.ba-after small{color:var(--gold)}
+.ba b{display:block;margin-top:3px;line-height:1.35;white-space:nowrap}
+.ba-before b{font-size:15px;font-size:min(16px,5.8cqi);color:var(--muted)}
+.ba-after b{font-size:18px;font-size:min(20px,7.4cqi)}
+.ba-after::before{content:"";position:absolute;left:-14px;top:50%;width:20px;height:20px;margin-top:-10px;border-radius:50%;background:var(--gold) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M8 6l4 4-4 4' fill='none' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/20px no-repeat}
+.case dl{margin-top:20px}
+.case dl>div+div{margin-top:14px}
+.case dt{font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--muted)}
+.case dd{margin:4px 0 0}
+.case dd li{position:relative;padding-left:14px;font-size:15px;line-height:1.75}
+.case dd li+li{margin-top:2px}
+.case dd li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--gold)}
+.case-voice{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
+.case-voice p{padding:2px 0 2px 14px;border-left:3px solid var(--gold);font-size:15px;line-height:1.8}
+.case-voice span{display:block;margin-top:6px;padding-left:17px;font-size:12.5px;color:var(--muted)}
+.cases-note{margin-top:20px;font-size:13.5px;color:var(--muted)}
+.case dd li,.case-voice p,.cases-lead{word-break:normal;text-wrap:pretty}
+@media (max-width:1180px){.ba>div{padding:11px 12px}}
+@media (max-width:960px){.case-list{grid-template-columns:1fr;row-gap:16px}.case{display:flex;flex-direction:column;padding:24px 20px}}
 </style>
 </head>
 <body>
@@ -291,6 +327,7 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
     <a class="brand" href="#top" aria-label="BASEマネジメントワークス株式会社 ページの先頭へ"><b><span class="p">BASEマネジメントワークス株式会社</span></b><small><span class="p">経理改善のプロフェッショナル</span></small></a>
     <nav class="nav" aria-label="ページ内">
       <a href="#services">支援内容</a>
+      <a href="#cases">支援事例</a>
       <a href="#person">代表・体制</a>
       <a href="#pricing">料金</a>
       <a href="#faq">よくある質問</a>
@@ -335,9 +372,9 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
 
 <section id="services" class="alt" aria-labelledby="services-h">
   <div class="wrap">
-    <h2 id="services-h" class="statement"><span class="p">月次決算まで</span>、<wbr><span class="p">最短で回す</span>。</h2>
+    <h2 id="services-h" class="statement"><span class="l"><span class="p">税理士は</span><wbr><span class="p">申告のプロ</span>。</span><span class="l"><span class="p">その手前の</span><wbr><span class="p">毎日の経理を</span>、<wbr><span class="p">私たちが</span><wbr><span class="p">引き受けます</span>。</span></h2>
 
-    <p class="scope-text"><span class="l">代表の柴沼は、勤務先で税務申告を担当した経験がありますが、税務相談・申告は税理士の領域です。</span><span class="l">当社は、その手前にある記帳から月次決算までの経理業務を、実務と仕組みの両面から整えます。</span><span class="l">資料をご提供いただければ、あとは当社が進めます。</span></p>
+    <p class="scope-text"><span class="l">記帳・請求・支払から月次決算までを、実務と仕組みの両面から整えます。</span><span class="l">資料をご提供いただければ、あとは当社が進めます。</span></p>
 
     <h3 class="sub-h">支援内容</h3>
     <div class="svc-list">
@@ -351,6 +388,52 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
       <p><span class="p">どこから手をつけるか</span>、<wbr><span class="p">一緒に整理します</span>。</p>
       <a class="btn btn-teal" href="https://timerex.net/s/ba.08h_1a1f/03e8fbdc" target="_blank" rel="noopener" data-track="cta_mid"><span class="p">経理の状況を</span><wbr><span class="p">無料で相談する</span><span class="vh">（予約ページが<wbr>新しい<wbr>タブで<wbr>開きます）</span></a>
     </div>
+  </div>
+</section>
+
+<section id="cases" aria-labelledby="cases-h">
+  <div class="wrap">
+    <h2 id="cases-h" class="statement">支援事例</h2>
+    <p class="cases-lead">支援の前と後で、何が変わったか。</p>
+    <div class="case-list">
+      <article class="case">
+        <p class="case-ind">SaaSの開発・販売</p>
+        <p class="case-meta">従業員20名弱｜支援期間6か月</p>
+        <h3><span class="p">数か月遅れの</span><wbr><span class="p">月次決算を、</span><wbr><span class="p">翌月15日に締める。</span></h3>
+        <p class="ba-cap">月次決算の締め</p>
+        <div class="ba"><div class="ba-before"><small>支援前</small><b>数か月遅れ</b></div><div class="ba-after"><small>支援後</small><b>翌月15日</b></div></div>
+        <dl>
+          <div><dt>課題</dt><dd><ul><li>経理の専門人材が不在で、日々の処理に追われる</li><li>月次決算が数か月遅れ、足元の業績が見えない</li></ul></dd></div>
+          <div><dt>支援内容</dt><dd><ul><li>業務を棚卸しし、担当・期限・手順を整理</li><li>遅れていた記帳と月次処理を、当社が引き取って解消</li><li>毎月の締めスケジュールを設計</li></ul></dd></div>
+        </dl>
+        <blockquote class="case-voice"><p>「あったらいいな」と思っていたことを、ひとつずつ形にしてもらえました。</p><span>お客様の声</span></blockquote>
+      </article>
+      <article class="case">
+        <p class="case-ind">リユース業</p>
+        <p class="case-meta">従業員10名弱</p>
+        <h3><span class="p">外部委託で</span><wbr><span class="p">止まっていた経理を、</span><wbr><span class="p">立て直す。</span></h3>
+        <p class="ba-cap">月次決算の締め</p>
+        <div class="ba"><div class="ba-before"><small>支援前</small><b>締まらない</b></div><div class="ba-after"><small>支援後</small><b>翌月15日</b></div></div>
+        <dl>
+          <div><dt>課題</dt><dd><ul><li>委託先の対応が遅く、処理が滞る</li><li>追加費用ばかりかさみ、締まる見通しが立たない</li></ul></dd></div>
+          <div><dt>支援内容</dt><dd><ul><li>業務の流れを洗い出し、止まっている箇所を特定</li><li>滞っていた処理を、当社が引き取って解消</li><li>締めの段取りを決め、翌月15日締めを定着</li></ul></dd></div>
+        </dl>
+        <blockquote class="case-voice"><p>ずっと一人で悩んでいました。「こうなればいいのに」を、実現してもらえました。</p><span>お客様の声</span></blockquote>
+      </article>
+      <article class="case">
+        <p class="case-ind">スマートフォンアプリ事業</p>
+        <p class="case-meta">10名規模</p>
+        <h3><span class="p">資金繰りを、</span><wbr><span class="p">6か月先まで</span><wbr><span class="p">見通す。</span></h3>
+        <p class="ba-cap">資金繰りの見通し</p>
+        <div class="ba"><div class="ba-before"><small>支援前</small><b>不透明</b></div><div class="ba-after"><small>支援後</small><b>6か月先まで</b></div></div>
+        <dl>
+          <div><dt>課題</dt><dd><ul><li>資金繰りの見通しが立たず、月末の残高に常に不安</li><li>入出金の予定が一元管理されていない</li></ul></dd></div>
+          <div><dt>支援内容</dt><dd><ul><li>6か月先まで予測できる資金繰り表を設計・作成</li><li>毎月の更新手順を決め、社内で運用できる形に</li></ul></dd></div>
+        </dl>
+        <blockquote class="case-voice"><p>すぐに動いてもらえて助かっています。今後もお願いしたいです。</p><span>お客様の声</span></blockquote>
+      </article>
+    </div>
+    <p class="cases-note">守秘義務のため、社名は伏せて掲載しています。</p>
   </div>
 </section>
 
@@ -424,7 +507,7 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
       <details><summary><span class="q">Q</span><span><span class="p">社内の担当者を残して</span>、<wbr><span class="p">必要なところだけ</span><wbr><span class="p">頼めますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">現在の体制を伺い、社内で行うことと当社が支援することを整理します。</span><span class="l">対象業務と役割分担は、個別にご相談のうえ決めます。</span><span class="l">社内人材への教育プログラムの導入実績も多数あります。</span></p></div></details>
       <details><summary><span class="q">Q</span><span><span class="p">会計ソフトを変える</span><wbr><span class="p">必要はありますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">現在の<span class="nw">ソフト</span>と運用状況を確認し、そのまま使う方法も含めて検討します。</span><span class="l">変更が必要な場合は、業務への影響や進め方をご相談します。</span></p></div></details>
       <details><summary><span class="q">Q</span><span><span class="p">料金はどのように</span><wbr><span class="p">決まりますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">対応する業務、取引量、整理が必要な期間、資料の状態などを確認してお見積りします。</span><span class="l">継続的な経理代行・改善の目安は、月額<span class="nw">88,000円〜</span>（税抜）です。</span></p></div></details>
-      <details><summary><span class="q">Q</span><span><span class="p">税務申告も</span><wbr><span class="p">頼めますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">税務相談・申告などは税理士が担当します。</span><span class="l">必要に応じて提携税理士へのご相談が可能です。</span><span class="l">契約範囲と費用は個別にご案内します。</span></p></div></details>
+      <details><summary><span class="q">Q</span><span><span class="p">税務申告も</span><wbr><span class="p">頼めますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">代表の柴沼は勤務先で税務申告を担当した経験がありますが、税務相談・申告などは税理士が担当します。</span><span class="l">必要に応じて提携税理士へのご相談が可能です。</span><span class="l">契約範囲と費用は個別にご案内します。</span></p></div></details>
     </div>
   </div>
 </section>
