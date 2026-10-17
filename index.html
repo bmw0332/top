@@ -127,12 +127,13 @@ h2{font-size:34px}
 .node.core>span{color:rgba(255,255,255,.86)}
 .o-team{padding:24px}
 .o-team>b{font-size:17px}
-.pros-h{margin-top:14px;font-size:12.5px;color:var(--muted)}
-.pros{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px}
-.pros li{padding:4px 12px;border:1px solid var(--line);border-radius:999px;background:var(--alt);font-size:13.5px;line-height:1.6}
-.o-down{position:relative;height:56px}
-.o-down>i{position:absolute;left:50%;top:0;bottom:0;width:2px;background:var(--teal);transform:translateX(-50%)}
-.o-down>span{position:absolute;left:calc(50% + 12px);top:50%;transform:translateY(-50%);font-size:12.5px;color:var(--muted)}
+.pros-h{margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+.pros{margin-top:4px;font-size:14.5px;font-weight:500;line-height:1.85;font-feature-settings:"palt"}
+/* 代表→実務パートナーの太い下矢印（軸＋矢じり） */
+.o-down{position:relative;height:66px}
+.o-down>i{position:absolute;left:50%;top:8px;bottom:32px;width:26px;background:var(--teal);transform:translateX(-50%)}
+.o-down>i::after{content:"";position:absolute;left:50%;top:calc(100% - 1px);border-style:solid;border-width:24px 30px 0;border-color:var(--teal) transparent transparent;transform:translateX(-50%)}
+.o-down>span{position:absolute;left:calc(50% + 40px);top:50%;transform:translateY(-50%);font-size:12.5px;color:var(--muted)}
 
 /* pricing */
 .plans{display:grid;gap:16px;margin-top:36px}
@@ -186,7 +187,7 @@ h2{font-size:34px}
 .ft{padding:44px 0 calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
 .ft .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px}
 .ft b{display:block;font-size:16px;color:var(--teal)}
-.ft nav{display:flex;flex-wrap:wrap;gap:24px}
+.ft nav{display:flex;flex-wrap:wrap;gap:8px 24px}
 .ft nav a{color:var(--muted);text-decoration:none}
 .ft nav a:hover{color:var(--teal);text-decoration:underline}
 body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
@@ -216,9 +217,12 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
   .team{padding:32px 24px}
   .say{font-size:18px}
   .org{grid-template-columns:minmax(0,1fr);margin-top:24px}
-  .o-down{height:40px}
+  .o-down{height:56px}
+  .o-down>i{top:6px;bottom:26px;width:22px}
+  .o-down>i::after{border-width:20px 25px 0}
+  .o-down>span{left:calc(50% + 34px)}
   .o-team{padding:20px 14px}
-  .pros li{padding:3px 10px;font-size:12.5px}
+  .pros{font-size:13.5px}
 }
 @media (max-width:768px){
   :root{--hh:56px}
@@ -232,7 +236,7 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
 
   .hero .wrap{grid-template-columns:1fr;gap:0;padding-top:0;padding-bottom:48px}
   .hero-fig{order:-1;margin:0 -20px;aspect-ratio:16/9;border-radius:0}
-  .hero-fig img{object-position:50% 20%}
+  .hero-fig img{object-position:50% 8%}
   .hero-text{padding-top:30px}
   .kicker{margin-bottom:18px;font-size:14px}
   .hero h1{font-size:28px;font-size:clamp(22px,7.6cqi,40px)}
@@ -350,7 +354,7 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
       <p class="more"><a href="#pricing">料金の目安を見る</a></p>
     </div>
     <figure class="hero-fig">
-      <img src="hero-main.webp" alt="資料を見ながら打ち合わせをする様子" width="1448" height="1086" fetchpriority="high" decoding="async">
+      <img src="hero-main.webp" alt="オフィスでパソコンと書類に向かい、業務を進める様子" width="1448" height="1086" fetchpriority="high" decoding="async">
     </figure>
   </div>
 </section>
@@ -463,7 +467,7 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
           <b><span class="p">実務パートナー</span></b>
           <span><span class="p">記帳・⁠請求・⁠支払</span>・<span class="p">月次決算などの</span><wbr><span class="p">実務を担当</span></span>
           <p class="pros-h">主な<wbr>メンバー</p>
-          <ul class="pros"><li><span class="p">提携税理士</span></li><li><span class="p">東証プライム上場企業</span><wbr><span class="p">マネージャー</span></li><li><span class="p">公認会計士合格者</span></li><li>外資系<span class="p">コンサルティング</span><wbr>ファーム<wbr><span class="p">出身者</span></li><li>大手企<wbr>業<span class="p">出身者</span></li></ul>
+          <p class="pros">公認会計士合格者、<wbr>税理士合格者、<wbr>外資系コンサルティング<wbr>ファーム出身者、<wbr>大手企業出身者、<wbr>経理経験20年以上の<wbr>スタッフ、<wbr>提携税理士・&#x2060;弁護士等</p>
         </div>
       </div>
     </div>
@@ -544,7 +548,8 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
     <div><b>BASEマネジメントワークス株式会社</b>経理改善のプロフェッショナル</div>
     <nav aria-label="フッター">
       <a href="#" data-todo="company-url">運営会社情報</a>
-      <a href="#" data-todo="privacy-url">プライバシーポリシー</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
       <a href="#contact">お問い合わせ</a>
     </nav>
   </div>
