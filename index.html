@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>経理業務を前へ進める、社長の右腕｜経理改善・経理代行｜BASEマネジメントワークス株式会社</title>
-<meta name="description" content="経理の改善を、社長ひとりで抱えている会社様へ。BASEマネジメントワークス株式会社が、記帳・請求・支払・月次決算の実務から、担当が変わっても回る仕組みづくりまで支援します。初回相談無料。">
+<meta name="description" content="経理全体を任せられる人がおらず、社長が抱えている会社へ。BASEマネジメントワークス株式会社が、記帳・請求・支払から月次決算まで毎月の経理を引き受け、担当・手順・期限を整えます。経理代行・改善は月額88,000円〜（税抜）。初回相談は30分・オンライン・無料。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -26,8 +26,8 @@ body{
 .l{display:block}
 .nw{white-space:nowrap}
 /* 改行ルール：見出し・短いコピーは言葉の区切りで折り返す。本文はブラウザ標準の自動折り返し（行末まで詰める・行頭の句読点は禁止） */
-h1,h2,h3,h4,.kicker,.sub,.micro,.issues li,.pivot,.mid p,.book-note,.faq summary,.node,.name,.role,.ask li,.assure li,.points li{text-wrap:balance}
-.bio,.scope-text,.say,.svc p,.plan p:last-child,.steps p,.faq .a p,.note,.next,.lead,.desc{word-break:normal;text-wrap:wrap}
+h1,h2,h3,h4,.kicker,.sub,.micro,.issues li,.pivot,.mid p,.book-note,.faq summary,.node,.name,.role,.ask li,.assure li,.points li,.acts li,.mail p,.co dd,.bio{text-wrap:balance}
+.scope-text,.say,.svc p,.plan p:last-child,.steps p,.faq .a p,.note,.next,.lead,.desc{word-break:normal;text-wrap:wrap}
 .nw{white-space:nowrap}
 h1,h2,h3,h4{font-weight:700;line-height:1.5;letter-spacing:.03em;font-feature-settings:"palt"}
 img{display:block;max-width:100%}
@@ -71,18 +71,24 @@ h2{font-size:34px}
 /* 1行目が列幅に収まるよう、列幅に合わせて拡縮 */
 .hero h1{font-size:44px;font-size:clamp(22px,7.6cqi,52px);line-height:1.4;letter-spacing:.02em;color:var(--teal)}
 .hero .sub{margin-top:24px;font-size:17px;line-height:1.9}
-.hero .cta{margin-top:34px}
+.hero .cta{margin-top:24px}
 .hero .cta .btn{font-size:18px;padding:16px 34px}
 .micro{margin-top:12px;font-size:14px;color:var(--muted)}
-.more{margin-top:16px;font-size:14.5px}
+/* トップの価格表示 */
+.hero-price{display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 14px;width:fit-content;max-width:100%;margin-top:26px;padding:12px 20px 13px;border-radius:10px;background:#fff}
+.hp-label{font-size:14px;font-weight:700}
+.hp-num{font-size:16px;font-weight:700;color:var(--teal);font-feature-settings:"palt"}
+.hp-num b{margin:0 2px;font-size:28px;letter-spacing:.01em}
+.hp-num small{margin-left:4px;font-size:12.5px;font-weight:500;color:var(--muted)}
+.hero-price a{font-size:13.5px}
 .hero-fig{position:absolute;top:0;right:0;bottom:0;width:46vw;margin:0;background:#dfe7e4}
 .hero-fig img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
-.hero-name{position:absolute;left:28px;bottom:28px;width:340px;max-width:calc(100% - 56px);padding:16px 20px;border-radius:10px;background:rgba(255,255,255,.96);box-shadow:0 10px 28px rgba(13,69,73,.16);line-height:1.5}
+.hero-name{position:absolute;left:28px;bottom:28px;width:380px;max-width:calc(100% - 56px);padding:16px 20px;border-radius:10px;background:rgba(255,255,255,.96);box-shadow:0 10px 28px rgba(13,69,73,.16);line-height:1.5}
 .hero-name>span{display:block}
 .hn-lead{font-size:13px;font-weight:700;color:var(--teal)}
 .hn-name{margin-top:2px;font-size:22px;font-weight:700;letter-spacing:.06em;color:var(--ink)}
 .hn-name small{margin-right:10px;font-size:13px;font-weight:500;letter-spacing:.03em;color:var(--muted)}
-.hn-note{margin-top:8px;padding-top:8px;border-top:1px solid var(--line);font-size:12.5px;line-height:1.7;color:var(--muted)}
+.hn-note{margin-top:8px;padding-top:8px;border-top:1px solid var(--line);font-size:12.5px;line-height:1.7;letter-spacing:.02em;font-feature-settings:"palt";color:var(--muted)}
 
 /* issues */
 .issues{max-width:780px;margin-top:40px;border-top:1px solid var(--line)}
@@ -103,6 +109,10 @@ h2{font-size:34px}
 .svc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;padding:26px 0;border-bottom:1px solid var(--line)}
 .svc h4{font-size:19px}
 .svc p{font-size:16px}
+/* 支援内容：実際に行うこと */
+.acts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 24px;margin-top:12px}
+.acts li{position:relative;padding-left:16px;font-size:15px;line-height:1.75}
+.acts li::before{content:"";position:absolute;left:1px;top:.75em;width:6px;height:6px;border-radius:50%;background:var(--gold)}
 .next{margin-top:28px;padding-left:16px;border-left:3px solid var(--gold);font-size:16px}
 .mid{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:56px;padding:32px 36px;border-radius:12px;background:#fff}
 .mid p{flex:1 1 16em;font-size:21px;font-weight:700;font-feature-settings:"palt"}
@@ -188,6 +198,20 @@ h2{font-size:34px}
 .assure li::before{content:"";position:absolute;left:2px;top:.45em;width:14px;height:8px;border-left:2.5px solid var(--gold-d);border-bottom:2.5px solid var(--gold-d);transform:rotate(-45deg)}
 .book .btn{width:100%;margin-top:28px;font-size:18px}
 .book-note{margin-top:12px;font-size:13.5px;color:var(--muted);text-align:center}
+/* メールでの質問・日程調整 */
+.mail{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);text-align:center}
+.mail p{font-size:14px;line-height:1.7;color:var(--muted)}
+.book .btn-line{min-height:50px;margin-top:12px;border:1.5px solid var(--teal);background:#fff;color:var(--teal);font-size:16px}
+.book .btn-line:hover{background:var(--alt)}
+.mail .mail-addr{margin-top:8px;font-size:15px;font-weight:500;letter-spacing:.04em;color:var(--ink)}
+
+/* company（運営会社） */
+.company{padding:72px 0}
+.company h2{font-size:24px}
+.co{max-width:820px;margin-top:24px;border-top:1px solid var(--line)}
+.co>div{display:grid;grid-template-columns:8em minmax(0,1fr);gap:24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.co dt{font-size:15px;font-weight:700}
+.co dd{font-size:15.5px}
 
 /* footer */
 .ft{padding:44px 0 calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
@@ -257,7 +281,11 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
   .kicker{margin-bottom:14px;font-size:14px}
   .hero h1{font-size:28px;font-size:clamp(22px,7.6cqi,40px)}
   .hero .sub{margin-top:18px;font-size:16px;line-height:1.85}
-  .hero .cta{margin-top:26px}
+  .hero-fig{aspect-ratio:3/2}
+  .hero-price{margin-top:20px;padding:10px 16px 11px}
+  .hero-price a{display:none}
+  .hp-num b{font-size:24px}
+  .hero .cta{margin-top:20px}
   .hero .cta .btn,.mid .btn{width:100%;padding:14px 16px;font-size:17px}
 
   .issues{margin-top:28px}
@@ -274,6 +302,8 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
   .svc{grid-template-columns:1fr;gap:6px;padding:22px 0}
   .svc h4{font-size:17.5px}
   .svc p{font-size:15.5px}
+  .acts{grid-template-columns:1fr}
+  .acts li{font-size:14.5px}
   .mid{flex-direction:column;align-items:stretch;gap:16px;margin-top:40px;padding:24px 20px}
   .mid p{flex:0 1 auto}
   .mid p{font-size:18px}
@@ -295,6 +325,9 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
   .book{padding:28px 20px}
   .book .btn{padding:14px 12px;font-size:17px}
   .ft .wrap{flex-direction:column}
+  .company{padding:52px 0}
+  .co>div{grid-template-columns:1fr;gap:2px;padding:14px 0}
+  .co dt{font-size:13.5px;color:var(--muted)}
 }
 @media (max-width:360px){
   .pivot{font-size:19px}
@@ -333,8 +366,9 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
 .case dd li::before{content:"";position:absolute;left:0;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--gold)}
 .case-voice{margin-top:20px;padding-top:18px;border-top:1px solid var(--line)}
 .case-voice p{padding:2px 0 2px 14px;border-left:3px solid var(--gold);font-size:15px;line-height:1.8}
-.case-voice span{display:block;margin-top:6px;padding-left:17px;font-size:12.5px;color:var(--muted)}
-.case dd li,.case-voice p,.cases-lead{word-break:normal;text-wrap:pretty}
+.case-voice>span{display:block;margin-top:6px;padding-left:17px;font-size:12.5px;color:var(--muted)}
+.case dd li,.cases-lead{word-break:normal;text-wrap:pretty}
+.case-voice p{text-wrap:pretty}
 @media (max-width:1180px){.ba>div{padding:11px 12px}}
 @media (max-width:960px){.case-list{grid-template-columns:1fr;row-gap:16px}.case{display:flex;flex-direction:column;padding:24px 20px}}
 </style>
@@ -360,19 +394,19 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
 <section class="hero" aria-labelledby="hero-h">
   <div class="wrap">
     <div class="hero-text">
-      <p class="kicker"><span class="p">経理の改善を、</span><wbr><span class="p">社長ひとりで</span><wbr><span class="p">抱えている会社様へ</span></p>
-      <h1 id="hero-h"><span class="l"><span class="p">経理業務を前へ進める</span>。</span><span class="l"><span class="p">社長の右腕を</span>、</span><span class="l"><span class="p">雇うよりずっとお手頃に</span>。</span></h1>
-      <p class="sub"><span class="l"><span class="p">記帳・⁠請求・⁠支払から</span><wbr><span class="p">月次決算まで。</span></span><span class="l"><span class="p">毎月の経理を</span><wbr><span class="p">代わりに回し、</span><wbr><span class="p">担当が変わっても</span><wbr><span class="p">回る仕組みにします。</span></span></p>
+      <p class="kicker"><span class="p">経理全体を</span><wbr><span class="p">任せられる人がおらず、</span><wbr><span class="p">社長が抱えている会社へ</span></p>
+      <h1 id="hero-h"><span class="l"><span class="p">経理業務を、</span><span class="p">前へ進める</span>。</span><span class="l"><span class="p">社長の右腕として</span>、</span><span class="l"><span class="p">実務から改善まで</span>。</span></h1>
+      <p class="sub"><span class="l"><span class="p">記帳・⁠請求・⁠支払から</span><wbr><span class="p">月次決算まで。</span></span><span class="l"><span class="p">毎月の経理を引き受け、</span><wbr><span class="p">担当・⁠手順・⁠期限を</span><wbr><span class="p">整えます。</span></span></p>
+      <p class="hero-price"><span class="hp-label">経理代行・⁠改善</span><span class="hp-num">月額<b>88,000</b>円〜<small>（税抜）</small></span><a href="#pricing">料金の詳細</a></p>
       <div class="cta">
         <a class="btn btn-teal" id="hero-btn" href="https://timerex.net/s/ba.08h_1a1f/03e8fbdc" target="_blank" rel="noopener" data-track="cta_hero"><span class="p">経理の状況を</span><wbr><span class="p">無料で相談する</span><span class="vh">（予約ページが<wbr>新しい<wbr>タブで<wbr>開きます）</span></a>
-        <p class="micro"><span class="l"><span class="p">初回相談は無料です</span>。</span><span class="l"><span class="p">資料が揃っていなくても</span><wbr><span class="p">ご相談いただけます</span>。</span></p>
+        <p class="micro"><span class="l"><span class="p">初回相談は</span><wbr><span class="nw">30分・オンライン・無料</span>です。</span><span class="l"><span class="p">資料が揃っていなくても</span><wbr><span class="p">ご相談いただけます</span>。</span></p>
       </div>
-      <p class="more"><a href="#pricing">料金の目安を見る</a></p>
     </div>
   </div>
   <figure class="hero-fig">
     <img src="hero-main.webp" alt="笑顔で腕を組む代表の柴沼 寛人" width="1600" height="1920" fetchpriority="high" decoding="async">
-    <figcaption class="hero-name"><span class="hn-lead">社長の右腕になる、</span><span class="hn-name"><small>代表取締役</small><span class="nw">柴沼 寛人</span></span><span class="hn-note">工場経理・決算・経営企画を経て、<wbr>リクルートで<wbr>経理の業務改善を経験</span></figcaption>
+    <figcaption class="hero-name"><span class="hn-lead">BASEマネジメントワークス<wbr>株式会社</span><span class="hn-name"><small>代表取締役</small><span class="nw">柴沼 寛人</span></span><span class="hn-note">中規模企業での<wbr>仕訳・&#x2060;経理・&#x2060;決算・&#x2060;経営企画を経て、<wbr>リクルートで<wbr>経理の<wbr>大規模業務改善<wbr>プロジェクトを経験</span></figcaption>
   </figure>
 </section>
 
@@ -380,7 +414,7 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
   <div class="wrap">
     <h2 id="issues-h">経理が、<wbr><span class="p">経営の足を</span><wbr><span class="p">止めていませんか</span>。</h2>
     <ul class="issues">
-      <li>今月の<wbr>利益を、<wbr><span class="p">すぐに答えられない</span>。</li>
+      <li>前月の<wbr>利益が、<wbr><span class="p">翌月になっても</span><wbr><span class="p">わからない</span>。</li>
       <li><span class="p">数か月先の資金が</span>、<wbr>読めない。</li>
       <li>経理作業に、<wbr><span class="p">経営者の時間が</span><wbr><span class="p">消えている</span>。</li>
       <li><span class="p">経理がわかるのは</span>、<wbr><span class="p">一人だけ</span>。</li>
@@ -394,13 +428,13 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
   <div class="wrap">
     <h2 id="services-h" class="statement"><span class="l"><span class="p">税理士は</span><wbr><span class="p">申告のプロ</span>。</span><span class="l"><span class="p">その手前の</span><wbr><span class="p">毎日の経理を</span>、<wbr><span class="p">私たちが</span><wbr><span class="p">引き受けます</span>。</span></h2>
 
-    <p class="scope-text"><span class="l">記帳・請求・支払から月次決算までを、実務と仕組みの両面から整えます。</span><span class="l">資料をご提供いただければ、あとは当社が進めます。</span></p>
+    <p class="scope-text"><span class="l">毎月の実務の代行と、仕組みづくりの両面から支援します。</span><span class="l">資料をご提供いただければ、必要な確認や調整も含めて、当社が進めます。</span></p>
 
     <h3 class="sub-h">支援内容</h3>
     <div class="svc-list">
-      <div class="svc"><h4><span class="p">止まっている経理を</span>、<wbr>整理する</h4><p>資料・帳簿・担当ごとの状況を確認し、未処理の業務と不足資料を洗い出して、優先順位を決めます。</p></div>
-      <div class="svc"><h4><span class="p">毎月の実務を</span>、<wbr><span class="p">代わりに回す</span></h4><p>記帳・請求・支払・売掛金と買掛金の管理・月次決算を、合意した範囲で代行します。</p></div>
-      <div class="svc"><h4><span class="p">担当が変わっても回る</span>、<wbr><span class="p">仕組みにする</span></h4><p><span class="l">資料の集め方・担当・期限・処理<span class="nw">ルール</span>を、手順書とチェックリストに。</span><span class="l">会計<span class="nw">ソフト</span>の運用も整え、担当者への引き継ぎまで支援します。</span></p></div>
+      <div class="svc"><h4><span class="p">止まっている経理を</span>、<wbr>整理する</h4><div><p>どこで止まっているかを確かめ、経理が動き出せる状態にします。</p><ul class="acts"><li>資料・⁠帳簿・⁠担当ごとの<wbr>状況確認</li><li>不足している<wbr>資料の確認</li><li>滞っている<wbr>処理の引き取り</li><li>優先順位と<wbr>進め方の決定</li></ul></div></div>
+      <div class="svc"><h4><span class="p">毎月の実務を</span>、<wbr><span class="p">代わりに回す</span></h4><div><p>合意した範囲の経理を毎月引き受け、締めまで進めます。</p><ul class="acts"><li>記帳・⁠請求・⁠支払</li><li>売掛金・⁠買掛金の管理</li><li>月次決算</li><li>社内の<wbr>担当者との調整</li><li>締め日程の管理</li></ul></div></div>
+      <div class="svc"><h4><span class="p">担当が変わっても回る</span>、<wbr><span class="p">仕組みにする</span></h4><div><p>誰が担当しても同じように回るよう、やり方を形にして残します。</p><ul class="acts"><li>資料の集め方・⁠担当・⁠期限・<wbr>処理ルールの整理</li><li>手順書と<wbr>チェックリストの作成</li><li>会計ソフトの<wbr>運用の見直し</li><li>社内への引き継ぎ<wbr>（ご希望・⁠契約内容に応じて）</li></ul></div></div>
     </div>
     <p class="note">支援範囲と作成する資料は、現状を確認したうえでお見積り時にご案内します。</p>
     <p class="next">数字が整った先の、資金繰りの見える化や事業別の利益管理もご相談いただけます。</p>
@@ -426,19 +460,19 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
           <div><dt>課題</dt><dd><ul><li>経理の専門人材が不在で、日々の処理に追われる</li><li>月次決算が数か月遅れ、足元の業績が見えない</li></ul></dd></div>
           <div><dt>支援内容</dt><dd><ul><li>業務を棚卸しし、担当・期限・手順を整理</li><li>遅れていた記帳と月次処理を、当社が引き取って解消</li><li>毎月の締めスケジュールを設計</li></ul></dd></div>
         </dl>
-        <blockquote class="case-voice"><p>「あったらいいな」と思っていたことを、ひとつずつ形にしてもらえました。</p><span>お客様の声（経理部長）</span></blockquote>
+        <blockquote class="case-voice"><p>ベテラン経理スタッフが<wbr>辞めてしまった後、<wbr>数か月分<wbr>たまっていた<wbr>記帳と<wbr>月次処理を<wbr>引き取ってもらい、<wbr>締めの段取りも<wbr>決めてもらいました。<wbr>いまは<wbr>翌月15日に<wbr>前月の数字が<wbr>そろいます。</p><span>お客様の声（経理部長）</span></blockquote>
       </article>
       <article class="case">
         <p class="case-ind">リユース業</p>
         <p class="case-meta">従業員10名弱</p>
-        <h3><span class="p">外部委託で</span><wbr><span class="p">止まっていた経理を、</span><wbr><span class="p">立て直す。</span></h3>
+        <h3><span class="p">業務委託の</span><wbr><span class="p">スキル不足により</span><wbr><span class="p">滞っていた経理を</span><wbr><span class="p">引き継ぎ、</span><wbr><span class="p">翌月18日締めを</span><wbr><span class="p">定着。</span></h3>
         <p class="ba-cap">月次決算の締め</p>
         <div class="ba"><div class="ba-before"><small>支援前</small><b>締まらない</b></div><div class="ba-after"><small>支援後</small><b>翌月18日</b></div></div>
         <dl>
           <div><dt>課題</dt><dd><ul><li>委託先の対応が遅く、処理が滞る</li><li>追加費用ばかりかさみ、締まる見通しが立たない</li></ul></dd></div>
-          <div><dt>支援内容</dt><dd><ul><li>業務の流れを洗い出し、止まっている箇所を特定</li><li>滞っていた処理を、当社が引き取って解消</li><li>締めの段取りを決め、翌月18日締めを定着</li></ul></dd></div>
+          <div><dt>支援内容</dt><dd><ul><li>業務の流れを洗い出し、止まっている箇所を特定</li><li>滞っていた処理を、当社が引き取って解消</li><li>締めの段取りを決め、締め日を固定</li></ul></dd></div>
         </dl>
-        <blockquote class="case-voice"><p>ずっと一人で悩んでいました。「こうなればいいのに」を、実現してもらえました。</p><span>お客様の声（代表取締役）</span></blockquote>
+        <blockquote class="case-voice"><p>前の委託先は<wbr>有名な大手でしたが、<wbr>スキルが低く<wbr>処理が<wbr>止まったまま、<wbr>費用だけが<wbr>かさんでいました。<wbr>滞っていた分を<wbr>引き取ってもらい、<wbr>いまは<wbr>毎月18日に<wbr>締まります。</p><span>お客様の声（代表取締役）</span></blockquote>
       </article>
       <article class="case">
         <p class="case-ind">スマートフォンアプリ事業</p>
@@ -450,7 +484,7 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
           <div><dt>課題</dt><dd><ul><li>資金繰りの見通しが立たず、月末の残高に常に不安</li><li>入出金の予定が一元管理されていない</li></ul></dd></div>
           <div><dt>支援内容</dt><dd><ul><li>6か月先まで予測できる資金繰り表を設計・作成</li><li>毎月の更新手順を決め、社内で運用できる形に</li></ul></dd></div>
         </dl>
-        <blockquote class="case-voice"><p>すぐに動いてもらえて助かっています。今も継続してご支援いただいています。</p><span>お客様の声（代表取締役）</span></blockquote>
+        <blockquote class="case-voice"><p>相談して<wbr>すぐに<wbr>動いてもらい、<wbr>ばらばらだった<wbr>入出金の予定を<wbr>一つの表に<wbr>まとめてもらいました。<wbr>いまも<wbr>続けて<wbr>お願いしています。</p><span>お客様の声（代表取締役）</span></blockquote>
       </article>
     </div>
   </div>
@@ -464,11 +498,11 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
       <div>
         <p class="name"><span class="p">柴沼</span> <span class="p">寛人</span></p>
         <p class="role"><span class="p">BASEマネジメントワークス株式会社</span> <span class="p">代表取締役社長</span></p>
-        <p class="bio"><span class="l"><span class="nw">2015年</span>に世界シェア1位の<span class="nw">ジョイント</span><span class="nw">ベンチャー</span>・中小企業に入社し、工場経理・本社経理、税務、月次・年次決算、経営企画、業務改善、DXに従事。</span><span class="l">その後、株式会社リクルートにて経理業務の流れを揃える取り組みとDX<span class="nw">システム</span>導入を経験してきました。</span></p>
+        <p class="bio"><span class="l">中規模企業と<wbr>大企業の<wbr>両方で、<wbr>社内の経理に<wbr>携わってきました。</span><span class="l">大企業で<wbr>身につけた<wbr>仕組みづくりを、<wbr>中小企業の<wbr>支援で<wbr>積んできた<wbr>経験と<wbr>あわせて、<wbr>貴社の経理に<wbr>生かします。</span></p>
         <ul class="points">
-          <li><span class="p">手順の共有</span>を<wbr>含む、<wbr><span class="p">業務改善</span>の<wbr>推進</li>
-          <li>記帳から<wbr><span class="p">月次・⁠年次決算</span>までの<wbr>実務</li>
-          <li><span class="p">請求・⁠支払</span>・債権管理の<wbr>業務設計と<wbr>システム導入</li>
+          <li><span class="nw">2015年</span>に入社した<wbr>中規模企業で、<wbr>工場経理から<wbr>月次・⁠年次決算、<wbr>資金繰り、<wbr>経営企画、<wbr>会計システムの刷新まで、<wbr>経理全体を経験</li>
+          <li>株式会社リクルートで、<wbr>経理の大規模な<wbr>業務改善プロジェクトと、<wbr>債権管理<wbr>（売上代金の回収）の<wbr>業務設計を経験</li>
+          <li><span class="nw">2020年</span>から、<wbr>中小企業や<wbr>個人事業主の<wbr>経理を支援</li>
         </ul>
         <p class="soft">freee／マネーフォワード／弥生／SAP／<span class="nw">オービック</span>などの利用経験</p>
       </div>
@@ -501,18 +535,18 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
       <div class="plan"><h3>スポット支援</h3><p class="price">1時間<span class="nw">15,000円〜</span><small>（税抜）</small></p><p>決算前の整理や、個別の業務改善のご相談に対応します。</p></div>
     </div>
     <p class="note"><span class="l">表示価格は目安です。</span><span class="l">過去分の整理、開始時の整備、税理士への依頼を含む場合の範囲と費用は、個別にご案内します。</span></p>
-    <p class="free">初回相談は無料です。</p>
+    <p class="free">初回相談は<wbr><span class="nw">30分・オンライン・無料</span>です。</p>
   </div>
 </section>
 
 <section id="flow" aria-labelledby="flow-h">
   <div class="wrap">
-    <h2 id="flow-h"><span class="p">相談から支援開始まで</span></h2>
+    <h2 id="flow-h"><span class="p">ご相談からの流れ</span></h2>
     <ol class="steps">
-      <li><h3>無料相談</h3><p><span class="l">困っていることを、わかる範囲でお聞かせください。</span><span class="l">資料が揃っていなくても構いません。</span></p></li>
+      <li><h3>無料相談</h3><p><span class="l">30分・オンラインで、困っていることをわかる範囲でお聞かせください。</span><span class="l">資料が揃っていなくても構いません。</span></p></li>
       <li><h3>ご提案・<wbr>お見積り</h3><p>業務量と体制を伺い、対応範囲・進め方・費用をご案内します。</p></li>
       <li><h3>支援開始</h3><p><span class="l">契約内容と役割分担を確認し、優先順位を決めて進めます。</span><span class="l">ご提供・ご確認いただく内容も整理します。</span></p></li>
-      <li><h3>運用確認・<wbr>引き継ぎ</h3><p>決めた手順で回っているかを確認し、契約した範囲で見直しや手順の共有を行います。</p></li>
+      <li><h3>継続運用・<wbr>改善</h3><p><span class="l">毎月の経理を続けて担当しながら、手順や締め日程を見直して改善します。</span><span class="l">社内への引き継ぎは、ご希望や契約内容に応じて対応します。</span></p></li>
     </ol>
   </div>
 </section>
@@ -527,6 +561,10 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
       <details><summary><span class="q">Q</span><span><span class="p">会計ソフトを変える</span><wbr><span class="p">必要はありますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">現在の<span class="nw">ソフト</span>と運用状況を確認し、そのまま使う方法も含めて検討します。</span><span class="l">変更が必要な場合は、業務への影響や進め方をご相談します。</span></p></div></details>
       <details><summary><span class="q">Q</span><span><span class="p">料金はどのように</span><wbr><span class="p">決まりますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">対応する業務、取引量、整理が必要な期間、資料の状態などを確認してお見積りします。</span><span class="l">継続的な経理代行・改善の目安は、月額<span class="nw">88,000円〜</span>（税抜）です。</span></p></div></details>
       <details><summary><span class="q">Q</span><span><span class="p">税務申告も</span><wbr><span class="p">頼めますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">代表の柴沼は勤務先で税務申告を担当した経験がありますが、税務相談・申告などは税理士が担当します。</span><span class="l">必要に応じて提携税理士へのご相談が可能です。</span><span class="l">契約範囲と費用は個別にご案内します。</span></p></div></details>
+      <details><summary><span class="q">Q</span><span><span class="p">相談してから</span>、<wbr><span class="p">どのくらいで</span><wbr><span class="p">支援を始められますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">業務量と体制を伺い、開始日はご相談のうえ決めます。</span><span class="l">資料が揃っていない場合も、不足資料の確認から始められます。</span></p></div></details>
+      <details><summary><span class="q">Q</span><span><span class="p">担当者は</span><wbr><span class="p">誰になりますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">代表の柴沼が支援全体を統括し、日々の実務は実務パートナーが担当します。</span><span class="l">担当の体制は、ご提案・お見積りの際にご案内します。</span></p></div></details>
+      <details><summary><span class="q">Q</span><span><span class="p">日中に</span><wbr><span class="p">連絡はとれますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">連絡の方法と時間帯は、支援を始める前に取り決めます。</span><span class="l">メール<span class="nw">（<a href="mailto:info@base-mw.com">info@base-mw.com</a>）</span>でのご質問は、いつでもお送りいただけます。</span></p></div></details>
+      <details><summary><span class="q">Q</span><span><span class="p">預けた資料やデータは</span>、<wbr><span class="p">どう扱われますか</span>。</span><span class="ico" aria-hidden="true"></span></summary><div class="a"><b>A</b><p><span class="l">受け渡しの方法は、支援を始める前にご相談のうえ決めます。</span><span class="l">お預かりした資料・データは、契約で定めた業務の範囲内でのみ利用し、<a class="nw" href="privacy.html">プライバシーポリシー</a>に沿って管理します。</span></p></div></details>
     </div>
   </div>
 </section>
@@ -548,13 +586,31 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
     <div class="book">
       <h3>初回無料相談の<wbr>ご予約</h3>
       <ul class="assure">
-        <li><span class="p">初回相談は無料です</span></li>
+        <li><span class="p">初回相談は</span><wbr><span class="nw">30分・オンライン・無料</span>です</li>
         <li><span class="p">資料が揃っていなくても</span><wbr><span class="p">ご相談いただけます</span></li>
         <li>支援内容と<wbr>費用は、<wbr><span class="p">状況を伺ってご案内します</span></li>
       </ul>
       <a class="btn btn-teal" href="https://timerex.net/s/ba.08h_1a1f/03e8fbdc" target="_blank" rel="noopener" data-track="cta_final"><span class="p">経理の状況を</span><wbr><span class="p">無料で相談する</span><span class="vh">（予約ページが<wbr>新しい<wbr>タブで<wbr>開きます）</span></a>
       <p class="book-note"><span class="p">TimeRexの予約ページで</span>、<wbr><span class="p">ご都合のよい日時を</span><wbr><span class="p">お選びください</span>。</p>
+      <div class="mail">
+        <p><span class="p">日程が合わない場合や、</span><wbr><span class="p">予約の前に聞きたいことは、</span><wbr><span class="p">メールでも受け付けています。</span></p>
+        <a class="btn btn-line" href="mailto:info@base-mw.com?subject=%E7%B5%8C%E7%90%86%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&amp;body=%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0D%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E3%81%94%E8%B3%AA%E5%95%8F%E3%83%BB%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E6%97%A5%E6%99%82%EF%BC%9A%0D%0A" data-track="mail_contact"><span class="p">メールで</span><wbr><span class="p">質問・⁠日程調整をする</span></a>
+        <p class="mail-addr">info@base-mw.com</p>
+      </div>
     </div>
+  </div>
+</section>
+
+<section id="company" class="company" aria-labelledby="company-h">
+  <div class="wrap">
+    <h2 id="company-h">運営会社</h2>
+    <dl class="co">
+      <div><dt>会社名</dt><dd><span class="nw">BASEマネジメントワークス</span><wbr>株式会社</dd></div>
+      <div><dt>代表者</dt><dd>代表取締役社長　<span class="nw">柴沼 寛人</span></dd></div>
+      <div><dt>所在地</dt><dd>お求めに応じて、<wbr>遅滞なく<wbr>提示します。</dd></div>
+      <div><dt>連絡先</dt><dd><a class="nw" href="mailto:info@base-mw.com">info@base-mw.com</a></dd></div>
+      <div><dt>事業内容</dt><dd>経理代行<wbr>（記帳・⁠請求・⁠支払・⁠月次決算など）、<wbr>経理業務の<wbr>改善・⁠運用設計の支援</dd></div>
+    </dl>
   </div>
 </section>
 
@@ -564,7 +620,7 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
   <div class="wrap">
     <div><b>BASEマネジメントワークス株式会社</b>経理改善のプロフェッショナル</div>
     <nav aria-label="フッター">
-      <a href="#" data-todo="company-url">運営会社情報</a>
+      <a href="#company">運営会社情報</a>
       <a href="privacy.html">プライバシーポリシー</a>
       <a href="tokushoho.html">特定商取引法に基づく表記</a>
       <a href="#contact">お問い合わせ</a>
@@ -598,10 +654,11 @@ body.has-sticky .ft{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
   }
   if (mq.addEventListener) mq.addEventListener('change', updateSticky); else mq.addListener(updateSticky);
 
-  // 計測フック：予約ページへのクリック（予約完了はTimeRex側で計測）
+  // 計測フック：予約ページ・メールへのクリック（予約完了はTimeRex側で計測）
   document.querySelectorAll('[data-track]').forEach(function(a){
     a.addEventListener('click', function(){
-      if (window.dataLayer) window.dataLayer.push({event:'booking_click', cta:a.getAttribute('data-track')});
+      var ev = a.getAttribute('href').indexOf('mailto:') === 0 ? 'mail_click' : 'booking_click';
+      if (window.dataLayer) window.dataLayer.push({event:ev, cta:a.getAttribute('data-track')});
     });
   });
 })();
